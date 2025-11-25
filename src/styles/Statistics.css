@@ -1,0 +1,276 @@
+:root {
+  --primary-color: #0d4d0d;
+  --background: #1a1a1a;
+  --card-background: #2d5a2d;
+  --text-primary: #e8e8e8;
+  --text-secondary: #b8b8b8;
+  --border-color: #3d6a3d;
+  --profit-color: #4caf50;
+  --loss-color: #f44336;
+  --secondary-color: #d4af37;
+  --gold: #d4af37;
+  --felt-green: #2d5a2d;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: var(--text-primary);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--felt-green);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border: 2px solid var(--border-color);
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.tournament-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tournament-table th,
+.tournament-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tournament-table th {
+  background: linear-gradient(180deg, #1e4a1e 0%, #0d3d0d 100%);
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+}
+
+.tournament-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: scale(1.01);
+  transition: all 0.2s;
+}
+
+.tournament-table .profit {
+  color: var(--profit-color);
+  font-weight: 600;
+}
+
+.tournament-table .loss {
+  color: var(--loss-color);
+  font-weight: 600;
+}
+
+.highlight-row {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.3) 100%) !important;
+  font-weight: 600;
+  border-left: 4px solid var(--gold) !important;
+}
+
+.badge {
+  background: linear-gradient(135deg, var(--gold) 0%, #b8941f 100%);
+  color: #0d4d0d;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+  font-style: italic;
+}
+
+.points-cell {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.2em;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+.h2h-selector {
+  margin-bottom: 2rem;
+}
+
+.h2h-selector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.h2h-dropdown {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+.h2h-dropdown:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.h2h-results {
+  margin-top: 2rem;
+}
+
+.h2h-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.h2h-stat-card {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s;
+}
+
+.h2h-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.h2h-stat-card h4 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.h2h-big-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.h2h-stat-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.your-record {
+  border-top: 4px solid var(--profit-color);
+}
+
+.opponent-record {
+  border-top: 4px solid var(--loss-color);
+}
+
+.ties-record {
+  border-top: 4px solid var(--gold);
+}
+
+.h2h-details {
+  margin-top: 2rem;
+}
+
+.h2h-details h3 {
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.h2h-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.h2h-table th,
+.h2h-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.h2h-table th {
+  background: linear-gradient(180deg, #1e4a1e 0%, #0d3d0d 100%);
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+}
+
+.h2h-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.h2h-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.highlight-winner {
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--profit-color);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .tournament-table {
+    font-size: 0.875rem;
+  }
+
+  .tournament-table th,
+  .tournament-table td {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}

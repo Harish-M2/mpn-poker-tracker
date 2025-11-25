@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #0d4d0d;
+  --primary-hover: #0a3d0a;
+  --danger-color: #dc3545;
+  --background: #1a1a1a;
+  --card-background: #2d5a2d;
+  --text-primary: #e8e8e8;
+  --text-secondary: #b8b8b8;
+  --border-color: #3d6a3d;
+  --profit-color: #4caf50;
+  --loss-color: #f44336;
+  --admin-color: #d4af37;
+  --user-color: #4a90e2;
+  --gold: #d4af37;
+  --felt-green: #2d5a2d;
+}
+
+.admin-badge {
+  background: linear-gradient(135deg, var(--gold) 0%, #b8941f 100%);
+  color: #0d4d0d;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.user-badge {
+  background: linear-gradient(135deg, var(--user-color) 0%, #357abd 100%);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+}

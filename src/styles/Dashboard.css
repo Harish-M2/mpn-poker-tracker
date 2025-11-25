@@ -1,0 +1,336 @@
+:root {
+  --primary-color: #2c5f2d;
+  --primary-hover: #1e4620;
+  --danger-color: #dc3545;
+  --background: #f5f5f5;
+  --card-background: #ffffff;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --border-color: #ddd;
+  --profit-color: #28a745;
+  --loss-color: #dc3545;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background: var(--felt-green);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border: 2px solid var(--border-color);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #2d5a2d 0%, #1e4a1e 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: all 0.3s;
+  border: 3px solid var(--border-color);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+  border-color: var(--gold);
+}
+
+.stat-card.profit {
+  border-left: 6px solid var(--profit-color);
+  box-shadow: 0 4px 16px rgba(76, 175, 80, 0.2);
+}
+
+.stat-card.loss {
+  border-left: 6px solid var(--loss-color);
+  box-shadow: 0 4px 16px rgba(244, 67, 54, 0.2);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gold);
+  margin-top: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tournament-form {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-primary);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, #b8941f 100%);
+  color: #0d4d0d;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e5c44d 0%, var(--gold) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.tournament-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tournament-table th,
+.tournament-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tournament-table th {
+  background: linear-gradient(180deg, #1e4a1e 0%, #0d3d0d 100%);
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+}
+
+.tournament-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: scale(1.01);
+  transition: all 0.2s;
+}
+
+.tournament-table .profit {
+  color: var(--profit-color);
+  font-weight: 600;
+}
+
+.tournament-table .loss {
+  color: var(--loss-color);
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+  font-style: italic;
+}
+
+.points-cell {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.2em;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+.stat-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.month-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.month-card {
+  background: var(--felt-green);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border: 2px solid var(--border-color);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.month-card:hover {
+  transform: translateY(-4px);
+}
+
+.best-month {
+  border-top: 4px solid var(--profit-color);
+}
+
+.best-month:hover {
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);
+}
+
+.worst-month {
+  border-top: 4px solid var(--loss-color);
+}
+
+.worst-month:hover {
+  box-shadow: 0 8px 24px rgba(244, 67, 54, 0.3);
+}
+
+.month-card h3 {
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.month-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.month-profit {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.month-profit.profit {
+  color: var(--profit-color);
+}
+
+.month-profit.loss {
+  color: var(--loss-color);
+}
+
+.month-detail {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .month-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .tournament-table {
+    font-size: 0.875rem;
+  }
+
+  .tournament-table th,
+  .tournament-table td {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
